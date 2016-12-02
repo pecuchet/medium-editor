@@ -211,6 +211,10 @@
                 return;
             }
 
+            if (target.getAttribute('data-disable-preview') === 'true') {
+                return;
+            }
+
             // Detect empty href attributes
             // The browser will make href="" or href="#top"
             // into absolute urls when accessed as event.target.href, so check the html
